@@ -20,7 +20,9 @@ before_install:
 deploy:
   provider: release
   skip_cleanup: true
-  github-token: $GITHUB_TOKEN
+  api_key:
+    secure: $GITHUB_TOKEN
+  file: "FILE TO UPLOAD"
   on:
       branch: master
 script: 
