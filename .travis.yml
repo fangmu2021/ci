@@ -17,5 +17,11 @@ before_install:
   - unzip chromedriver_linux64.zip
   - export PATH=$PATH:$PWD
   - echo $PWD
+deploy:
+  provider: release
+  skip_cleanup: true
+  github-token: $GITHUB_TOKEN
+  on:
+      branch: master
 script: 
   touch 123.txt
